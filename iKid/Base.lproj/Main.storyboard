@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="huz-qJ-pc6">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vbp-Un-WNy">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="huz-qJ-pc6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lFk-dw-hfL">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bV0-Ee-NJg" kind="relationship" relationship="viewControllers" id="L7I-X7-owh"/>
+                        <segue destination="OmX-rb-1Bu" kind="relationship" relationship="viewControllers" id="Ide-7c-M6f"/>
+                        <segue destination="gC5-V1-7tX" kind="relationship" relationship="viewControllers" id="7yc-Uh-gfz"/>
+                        <segue destination="HPA-mz-hjn" kind="relationship" relationship="viewControllers" id="Vq1-lm-JDA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9K4-cK-ecR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1110" y="-568"/>
+        </scene>
+        <!--Dark Jokes-->
+        <scene sceneID="0uP-AI-1Ue">
+            <objects>
+                <viewController title="Dark Jokes" id="bV0-Ee-NJg" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oOa-qh-wZS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jokes LOL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-S4-3Vy" userLabel="DarkJoked Label">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m34-6d-WWA" userLabel="DarkJokes Button">
+                                <rect key="frame" x="62" y="525" width="250" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextJoke:" destination="bV0-Ee-NJg" eventType="touchUpInside" id="ESd-wK-Wak"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jar-ei-4xj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m34-6d-WWA" firstAttribute="top" secondItem="RHg-S4-3Vy" secondAttribute="bottom" constant="66.5" id="Il5-5Q-5Bk"/>
+                            <constraint firstItem="RHg-S4-3Vy" firstAttribute="centerY" secondItem="oOa-qh-wZS" secondAttribute="centerY" id="LD8-NA-ccf"/>
+                            <constraint firstItem="m34-6d-WWA" firstAttribute="leading" secondItem="Jar-ei-4xj" secondAttribute="leading" constant="62" id="WRZ-Qw-72g"/>
+                            <constraint firstItem="m34-6d-WWA" firstAttribute="centerX" secondItem="RHg-S4-3Vy" secondAttribute="centerX" id="Ykb-qm-vKR"/>
+                            <constraint firstItem="RHg-S4-3Vy" firstAttribute="leading" secondItem="Jar-ei-4xj" secondAttribute="leading" constant="62.5" id="g7D-5n-fhT"/>
+                            <constraint firstItem="m34-6d-WWA" firstAttribute="centerX" secondItem="oOa-qh-wZS" secondAttribute="centerX" id="pdK-Gr-Fga"/>
+                            <constraint firstItem="RHg-S4-3Vy" firstAttribute="top" secondItem="Jar-ei-4xj" secondAttribute="top" constant="188.5" id="qof-Bp-nf4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dark Jokes" id="l2T-o8-pWu"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="RHg-S4-3Vy" id="9v8-F2-yIy"/>
+                        <outlet property="nextButton" destination="m34-6d-WWA" id="e9w-oz-DWp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="169-ZK-XnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-1098.8005997001501"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="xYl-b6-aN7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aw6-jF-2UB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Pun" id="OmX-rb-1Bu" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFW-3O-Dd3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jokes LOL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8P-Wj-p6b" userLabel="Pun Label">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOb-qz-g0b" userLabel="Pun Button">
+                                <rect key="frame" x="62" y="525" width="250" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextJoke:" destination="OmX-rb-1Bu" eventType="touchUpInside" id="gze-vG-Hdg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ANB-3F-pYj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t8P-Wj-p6b" firstAttribute="centerY" secondItem="TFW-3O-Dd3" secondAttribute="centerY" id="05z-aB-rhX"/>
+                            <constraint firstItem="t8P-Wj-p6b" firstAttribute="leading" secondItem="ANB-3F-pYj" secondAttribute="leading" constant="62.5" id="cPZ-zN-tsT"/>
+                            <constraint firstItem="YOb-qz-g0b" firstAttribute="leading" secondItem="ANB-3F-pYj" secondAttribute="leading" constant="62" id="gLh-ez-2BT"/>
+                            <constraint firstItem="YOb-qz-g0b" firstAttribute="centerX" secondItem="TFW-3O-Dd3" secondAttribute="centerX" id="gpV-5S-dOU"/>
+                            <constraint firstItem="t8P-Wj-p6b" firstAttribute="centerX" secondItem="YOb-qz-g0b" secondAttribute="centerX" id="iXM-tR-O5f"/>
+                            <constraint firstItem="YOb-qz-g0b" firstAttribute="top" secondItem="t8P-Wj-p6b" secondAttribute="bottom" constant="66.5" id="oFe-Sj-NSw"/>
+                            <constraint firstItem="t8P-Wj-p6b" firstAttribute="top" secondItem="ANB-3F-pYj" secondAttribute="top" constant="188.5" id="tyA-6L-kPu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pun" id="KRx-DS-SuY"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="t8P-Wj-p6b" id="CM1-zw-eiK"/>
+                        <outlet property="nextButton" destination="YOb-qz-g0b" id="4Fz-u1-T3Z"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-299.10044977511245"/>
+        </scene>
+        <!--Dad-->
+        <scene sceneID="xQV-Ut-1Pu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7s-wK-NZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Dad" id="gC5-V1-7tX" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpa-eD-2fb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jokes LOL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-Z5-gwa" userLabel="Dad Label">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4E-GH-tvI" userLabel="Dad Button">
+                                <rect key="frame" x="62" y="525" width="250" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextJoke:" destination="gC5-V1-7tX" eventType="touchUpInside" id="d57-qa-kMZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qkr-qP-bRT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hiR-Z5-gwa" firstAttribute="leading" secondItem="qkr-qP-bRT" secondAttribute="leading" constant="62.5" id="50m-hN-hmU"/>
+                            <constraint firstItem="hiR-Z5-gwa" firstAttribute="top" secondItem="qkr-qP-bRT" secondAttribute="top" constant="188.5" id="A71-CI-4cN"/>
+                            <constraint firstItem="U4E-GH-tvI" firstAttribute="top" secondItem="hiR-Z5-gwa" secondAttribute="bottom" constant="66.5" id="Abx-3c-Igc"/>
+                            <constraint firstItem="hiR-Z5-gwa" firstAttribute="centerX" secondItem="U4E-GH-tvI" secondAttribute="centerX" id="FWY-ce-6IP"/>
+                            <constraint firstItem="U4E-GH-tvI" firstAttribute="leading" secondItem="qkr-qP-bRT" secondAttribute="leading" constant="62" id="Qax-Sf-Q76"/>
+                            <constraint firstItem="hiR-Z5-gwa" firstAttribute="centerY" secondItem="cpa-eD-2fb" secondAttribute="centerY" id="k5k-UB-6fk"/>
+                            <constraint firstItem="U4E-GH-tvI" firstAttribute="centerX" secondItem="cpa-eD-2fb" secondAttribute="centerX" id="wvB-KX-v2h"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dad" id="8iv-bc-w2U"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="hiR-Z5-gwa" id="Ocp-Nb-du2"/>
+                        <outlet property="nextButton" destination="U4E-GH-tvI" id="FF8-Yd-KZG"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-710" y="331"/>
+        </scene>
+        <!--Knock Knock-->
+        <scene sceneID="eVU-gI-NFq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Oa-Is-T5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Knock Knock" id="HPA-mz-hjn" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D5i-Lp-NEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jokes LOL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ce7-Dn-bDx" userLabel="KnockKnockLabel">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFy-dF-FKf" userLabel="KnockKnock Button">
+                                <rect key="frame" x="62" y="525" width="250" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextJoke:" destination="HPA-mz-hjn" eventType="touchUpInside" id="Jf0-RW-RzY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Xh-Jc-8x0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CFy-dF-FKf" firstAttribute="leading" secondItem="7Xh-Jc-8x0" secondAttribute="leading" constant="62" id="3td-s3-Jfb"/>
+                            <constraint firstItem="CFy-dF-FKf" firstAttribute="top" secondItem="ce7-Dn-bDx" secondAttribute="bottom" constant="66.5" id="Buk-IH-2wN"/>
+                            <constraint firstItem="ce7-Dn-bDx" firstAttribute="leading" secondItem="7Xh-Jc-8x0" secondAttribute="leading" constant="62.5" id="Nfu-1p-Kg8"/>
+                            <constraint firstItem="ce7-Dn-bDx" firstAttribute="centerX" secondItem="CFy-dF-FKf" secondAttribute="centerX" id="lEw-mh-bfP"/>
+                            <constraint firstItem="CFy-dF-FKf" firstAttribute="centerX" secondItem="D5i-Lp-NEk" secondAttribute="centerX" id="tWI-u7-rr8"/>
+                            <constraint firstItem="ce7-Dn-bDx" firstAttribute="top" secondItem="7Xh-Jc-8x0" secondAttribute="top" constant="188.5" id="u0y-Dl-1EG"/>
+                            <constraint firstItem="ce7-Dn-bDx" firstAttribute="centerY" secondItem="D5i-Lp-NEk" secondAttribute="centerY" id="zDs-qv-ry3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Knock Knock" id="e3S-jK-3T7"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="ce7-Dn-bDx" id="pTQ-b8-P9U"/>
+                        <outlet property="nextButton" destination="CFy-dF-FKf" id="0lO-ly-ANs"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1476" y="331"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
